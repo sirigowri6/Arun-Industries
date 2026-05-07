@@ -1,42 +1,64 @@
 function Hero() {
   return (
-    <div
+    <section
+      id="home"
       style={{
         height: "100vh",
         backgroundImage:
           "url('https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1974&auto=format&fit=crop')",
+
         backgroundSize: "cover",
         backgroundPosition: "center",
+
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+
+        textAlign: "center",
         color: "white",
+        position: "relative",
       }}
     >
       <div
         style={{
-          backgroundColor: "rgba(0,0,0,0.65)",
-          padding: "50px",
-          borderRadius: "20px",
-          textAlign: "center",
-          maxWidth: "1000px",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          backgroundColor: "rgba(0,0,0,0.6)",
+        }}
+      ></div>
+
+      <div
+        style={{
+          position: "relative",
+          zIndex: 2,
+          padding: "40px",
         }}
       >
-        <h1 style={{ fontSize: "65px", marginBottom: "20px" }}>
+        <h1
+          style={{
+            fontSize: "75px",
+            marginBottom: "20px",
+          }}
+        >
           Arun Industries
         </h1>
 
-        <h2 style={{ marginBottom: "20px", fontWeight: "normal" }}>
-          Lubricating Oil Refineries
-        </h2>
-
-        <p style={{ fontSize: "22px", lineHeight: "1.7" }}>
-          An Eco-Friendly Organization specializing in recycling and
-          re-refining used lubricating oils with environmentally safe
-          and sustainable industrial solutions.
+        <p
+          style={{
+            fontSize: "28px",
+            maxWidth: "900px",
+            margin: "auto",
+            lineHeight: "1.8",
+          }}
+        >
+          Leading Lubricating Oil Refinery &
+          Sustainable Industrial Solutions
         </p>
       </div>
-    </div>
+    </section>
   );
 }
 

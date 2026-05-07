@@ -8,11 +8,21 @@ function Contact() {
         textAlign: "center",
       }}
     >
-      <h1 style={{ fontSize: "50px", marginBottom: "40px" }}>
+      <h1
+        style={{
+          fontSize: "50px",
+          marginBottom: "40px",
+        }}
+      >
         Contact Us
       </h1>
 
-      <p style={{ fontSize: "22px", lineHeight: "2" }}>
+      <p
+        style={{
+          fontSize: "22px",
+          lineHeight: "2",
+        }}
+      >
         Arun Industries <br />
         Lubricating Oil Refineries <br />
         B-64, 3rd Stage, Peenya Industrial Area, <br />
@@ -24,7 +34,10 @@ function Contact() {
 
         ✉️ arunindustrieskumar@yahoo.co.in
       </p>
-    <div
+
+      {/* Google Maps */}
+
+      <div
         style={{
           marginTop: "50px",
           borderRadius: "20px",
@@ -36,19 +49,18 @@ function Contact() {
         }}
       >
         <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3694.924554146149!2d77.49693487484228!3d13.01891088730082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3df8f160918d%3A0x12bb0e666c054de9!2sArun%20industries!5e1!3m2!1sen!2sin!4v1778177118094!5m2!1sen!2sin"
-  width="100%"
-  height="400"
-  style={{ border: 0 }}
-  allowFullScreen=""
-  loading="lazy"
-  referrerPolicy="no-referrer-when-downgrade"
-  title="Arun Industries Location"
-></iframe>
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3694.924554146149!2d77.49693487484228!3d13.01891088730082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3df8f160918d%3A0x12bb0e666c054de9!2sArun%20industries!5e1!3m2!1sen!2sin!4v1778177118094!5m2!1sen!2sin"
+          width="100%"
+          height="400"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Arun Industries Location"
+        ></iframe>
       </div>
     </section>
   );
 }
 
 export default Contact;
-  

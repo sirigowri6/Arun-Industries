@@ -1,76 +1,113 @@
-import Statistics from "./Statistics.jsx";
-import Certification from "./Certification.jsx";
-
 function Explore() {
   return (
     <div
       style={{
-        backgroundColor: "#f5f5f5",
+        paddingTop: "140px",
         minHeight: "100vh",
+        backgroundColor: "#f5f5f5",
+        textAlign: "center",
       }}
     >
-      {/* Header */}
+      <h1
+        style={{
+          fontSize: "60px",
+          marginBottom: "30px",
+        }}
+      >
+        Explore Arun Industries
+      </h1>
+
+      <p
+        style={{
+          fontSize: "22px",
+          maxWidth: "900px",
+          margin: "auto",
+          lineHeight: "2",
+        }}
+      >
+        Certifications, company brochure,
+        government approvals and industrial achievements.
+      </p>
 
       <div
         style={{
-          backgroundColor: "#111827",
-          color: "white",
-          padding: "80px 20px",
-          textAlign: "center",
+          display: "grid",
+          gridTemplateColumns:
+            "repeat(auto-fit,minmax(250px,1fr))",
+          gap: "30px",
+          padding: "60px",
+          maxWidth: "1200px",
+          margin: "auto",
         }}
       >
-        <h1
-          style={{
-            fontSize: "60px",
-            marginBottom: "20px",
-          }}
-        >
-          Explore Arun Industries
-        </h1>
+        <div style={cardStyle}>
+          <h1 style={numberStyle}>25+</h1>
+          <p>Years Experience</p>
+        </div>
 
-        <p
-          style={{
-            fontSize: "22px",
-            maxWidth: "900px",
-            margin: "auto",
-            lineHeight: "1.8",
-          }}
-        >
-          Certifications, government approvals, industrial
-          achievements, and company brochure.
-        </p>
+        <div style={cardStyle}>
+          <h1 style={numberStyle}>5000+</h1>
+          <p>Tons Recycled</p>
+        </div>
 
-        {/* Brochure Button */}
-
-        <a
-          href="/company-brochure.pdf"
-          target="_blank"
-          rel="noreferrer"
-          style={{
-            display: "inline-block",
-            marginTop: "35px",
-            backgroundColor: "#00bfff",
-            color: "white",
-            padding: "15px 35px",
-            borderRadius: "40px",
-            textDecoration: "none",
-            fontWeight: "bold",
-            fontSize: "18px",
-          }}
-        >
-          Download Company Brochure
-        </a>
+        <div style={cardStyle}>
+          <h1 style={numberStyle}>100%</h1>
+          <p>Eco Friendly Process</p>
+        </div>
       </div>
 
-      {/* Statistics */}
+      <div
+  style={{
+    paddingBottom: "100px",
+  }}
+>
+  <a
+    href="/company-brochure.pdf"
+    target="_blank"
+    rel="noreferrer"
+    style={buttonStyle}
+  >
+    Download Company Brochure
+  </a>
 
-      <Statistics />
-
-      {/* Certifications */}
-
-      <Certification />
+  <a
+    href="/ISO-Certificate.pdf"
+    target="_blank"
+    rel="noreferrer"
+    style={{
+      ...buttonStyle,
+      backgroundColor: "#111827",
+      marginLeft: "20px",
+    }}
+  >
+    View ISO Certificate
+  </a>
+</div>
     </div>
   );
 }
+
+const cardStyle = {
+  backgroundColor: "white",
+  padding: "40px",
+  borderRadius: "20px",
+  boxShadow: "0 5px 20px rgba(0,0,0,0.1)",
+};
+
+const numberStyle = {
+  fontSize: "55px",
+  color: "#00bfff",
+};
+
+const buttonStyle = {
+  display: "inline-block",
+  backgroundColor: "#00bfff",
+  color: "white",
+  padding: "15px 35px",
+  borderRadius: "40px",
+  textDecoration: "none",
+  fontWeight: "bold",
+  fontSize: "18px",
+};
 
 export default Explore;

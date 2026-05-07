@@ -5,45 +5,29 @@ function Service() {
 
   const services = [
     {
-      title: "Re-refining of Used Oil",
-      details:
-        "We specialize in re-refining used lubricating oils using advanced vacuum distillation technology while ensuring environmentally safe operations.",
+      title: "Lubricating Oil Refining",
+      description:
+        "Advanced lubricating oil refining solutions using eco-friendly and efficient industrial processes.",
     },
 
     {
-      title: "Recycling of Lubricating Oils",
-      details:
-        "Arun Industries undertakes recycling of once-used lubricating oils to reduce environmental pollution and conserve natural resources.",
+      title: "Hazardous Waste Recycling",
+      description:
+        "Authorized recycling and management of hazardous industrial waste with environmental compliance.",
     },
 
     {
-      title: "Recycling of Insulating Oils",
-      details:
-        "We process and recycle insulating oils through safe and sustainable refining procedures meeting industrial standards.",
+      title: "Industrial Oil Processing",
+      description:
+        "High-quality processing and purification services for industrial lubricants and oils.",
     },
 
     {
-      title: "Hazardous Waste Management",
-      details:
-        "Our facility includes environmentally sound hazardous waste management systems approved by KSPCB/CPCB authorities.",
-    },
-
-    {
-      title: "Used Oil Transportation",
-      details:
-        "Dedicated vehicles are available for safe transportation and collection of hazardous used oils from industries and plants.",
-    },
-
-    {
-      title: "Vacuum Distillation Technology",
-      details:
-        "Our recycling process uses advanced vacuum distillation systems ensuring high-quality refined oil with minimal environmental impact.",
+      title: "Eco-Friendly Waste Management",
+      description:
+        "Sustainable and environmentally responsible waste management solutions for industries.",
     },
   ];
-
-  const toggleCard = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
 
   return (
     <section
@@ -65,30 +49,41 @@ function Service() {
 
       <div
         style={{
-          maxWidth: "1100px",
-          margin: "auto",
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
+          gridTemplateColumns:
+            "repeat(auto-fit,minmax(260px,1fr))",
           gap: "30px",
+          maxWidth: "1300px",
+          margin: "auto",
+          alignItems: "start",
         }}
       >
         {services.map((service, index) => (
           <div
             key={index}
-            onClick={() => toggleCard(index)}
+            onClick={() =>
+              setActiveIndex(
+                activeIndex === index ? null : index
+              )
+            }
             style={{
-              backgroundColor: "white",
-              padding: "30px",
-              borderRadius: "20px",
+              backgroundColor: "#07122b",
+              color: "white",
+              padding: "35px",
+              borderRadius: "25px",
               cursor: "pointer",
               transition: "0.4s",
-              boxShadow: "0 5px 20px rgba(0,0,0,0.1)",
+              minHeight: "180px",
+              boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
             }}
           >
             <h2
               style={{
-                marginBottom: "20px",
-                color: "#111827",
+                fontSize: "28px",
+                marginBottom:
+                  activeIndex === index ? "25px" : "0px",
+                textAlign: "center",
+                lineHeight: "1.3",
               }}
             >
               {service.title}
@@ -97,12 +92,13 @@ function Service() {
             {activeIndex === index && (
               <p
                 style={{
-                  lineHeight: "1.8",
-                  color: "#444",
-                  fontSize: "17px",
+                  fontSize: "18px",
+                  lineHeight: "1.9",
+                  textAlign: "center",
+                  color: "#dbeafe",
                 }}
               >
-                {service.details}
+                {service.description}
               </p>
             )}
           </div>
