@@ -18,28 +18,31 @@ function Navbar() {
       style={{
         position: "fixed",
         top: 0,
-        width: "100%",
+        left: 0,
+        right: 0,
         zIndex: 1000,
         padding: "20px 25px",
         backgroundColor: scrolled
-          ? "rgba(0,0,0,0.85)"
+          ? "rgba(0,0,0,0.9)"
           : "transparent",
         transition: "0.4s",
+        backdropFilter: scrolled ? "blur(10px)" : "none",
       }}
     >
       <div
-  style={{
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    width: "100%",
-    paddingRight: "60px",
-  }}
->
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          width: "100%",
+        }}
+      >
+        {/* Logo */}
+
         <h1
           style={{
             color: "white",
-            fontSize: "22px",
+            fontSize: "24px",
             fontWeight: "bold",
             margin: 0,
             whiteSpace: "nowrap",
@@ -48,15 +51,16 @@ function Navbar() {
           Arun Industries
         </h1>
 
+        {/* Navigation Links */}
+
         <div
-  style={{
-    display: "flex",
-    gap: "22px",
-    marginLeft: "auto",
-    paddingRight: "30px",
-    alignItems: "center",
-  }}
->
+          style={{
+            display: "flex",
+            gap: "22px",
+            alignItems: "center",
+            paddingRight: "20px",
+          }}
+        >
           <a href="#home" style={linkStyle}>
             Home
           </a>
@@ -72,6 +76,24 @@ function Navbar() {
           <a href="#contact" style={linkStyle}>
             Contact
           </a>
+
+          {/* Explore Button */}
+
+          <a
+            href="#certifications"
+            style={{
+              backgroundColor: "#00bfff",
+              color: "white",
+              padding: "10px 22px",
+              borderRadius: "30px",
+              textDecoration: "none",
+              fontWeight: "bold",
+              transition: "0.3s",
+              fontSize: "15px",
+            }}
+          >
+            Explore
+          </a>
         </div>
       </div>
     </nav>
@@ -81,7 +103,7 @@ function Navbar() {
 const linkStyle = {
   color: "white",
   textDecoration: "none",
-  fontSize: "16px",
+  fontSize: "15px",
   fontWeight: "500",
 };
 
