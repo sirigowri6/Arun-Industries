@@ -80,20 +80,19 @@ function Navbar() {
           {/* Explore Button */}
 
           <a
-            href="#certifications"
-            style={{
-              backgroundColor: "#00bfff",
-              color: "white",
-              padding: "10px 22px",
-              borderRadius: "30px",
-              textDecoration: "none",
-              fontWeight: "bold",
-              transition: "0.3s",
-              fontSize: "15px",
-            }}
-          >
-            Explore
-          </a>
+  href="/explore"
+  style={{
+    backgroundColor: "#00bfff",
+    color: "white",
+    padding: "10px 22px",
+    borderRadius: "30px",
+    textDecoration: "none",
+    fontWeight: "bold",
+    fontSize: "15px",
+  }}
+>
+  Explore
+</a>
         </div>
       </div>
     </nav>
