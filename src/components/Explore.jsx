@@ -62,7 +62,7 @@ function Explore() {
   }}
 >
   <a
-    href="/company-brochure.pdf"
+    href="company-brochure.pdf"
     target="_blank"
     rel="noreferrer"
     style={buttonStyle}
@@ -71,7 +71,7 @@ function Explore() {
   </a>
 
   <a
-    href="/ISO-Certificate.pdf"
+    href="ISO-Certificate.pdf.jpeg"
     target="_blank"
     rel="noreferrer"
     style={{
