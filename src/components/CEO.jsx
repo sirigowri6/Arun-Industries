@@ -20,8 +20,6 @@ function CEO() {
           gap: "80px",
         }}
       >
-        {/* LEFT IMAGE */}
-
         <motion.div
           initial={{ opacity: 0, x: -120 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -44,8 +42,6 @@ function CEO() {
             }}
           />
         </motion.div>
-
-        {/* RIGHT CONTENT */}
 
         <motion.div
           initial={{ opacity: 0, x: 120 }}
