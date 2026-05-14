@@ -25,10 +25,7 @@ function About() {
           margin: "auto",
         }}
       >
-        Arun Industries is a leading lubricating oil refinery company
-        located in Peenya Industrial Area, Bangalore. The company focuses
-        on environmentally responsible recycling, re-refining and
-        sustainable industrial oil processing solutions.
+        Arun Industries established in the year 1992. Company activities ranging from recycling of waste oil to trading of petroleum products. Our prominent client base both locally and abroad are well known to us for our reputation and timely deliveries. Most of our recycled product is sold locally and to the neighbouring states. Over the years Arun Industries has gained immense growth and recognition for its reliability and prompt services. We work very closely with our valued clients and we always look forward to assisting and supporting them by venturing into successful business infrastructure.
       </p>
     </section>
   );

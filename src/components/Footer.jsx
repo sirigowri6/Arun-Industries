@@ -1,3 +1,4 @@
+import logo from "../assets/logo.png";
 function Footer() {
   return (
     <footer
@@ -8,14 +9,34 @@ function Footer() {
         textAlign: "center",
       }}
     >
-      <h2
-        style={{
-          marginBottom: "20px",
-          fontSize: "30px",
-        }}
-      >
-        Arun Industries
-      </h2>
+      <div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "12px",
+    marginBottom: "20px",
+  }}
+>
+  <img
+    src={logo}
+    alt="logo"
+    style={{
+      width: "50px",
+      height: "50px",
+      objectFit: "contain",
+    }}
+  />
+
+  <h2
+    style={{
+      margin: 0,
+      fontSize: "32px",
+    }}
+  >
+    Arun Industries
+  </h2>
+</div>
 
       <p
         style={{
