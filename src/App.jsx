@@ -11,7 +11,7 @@ import Service from "./components/Service.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 import Explore from "./components/Explore.jsx";
-import CEO from "./components/CEO";
+import CEO from "./components/CEO.jsx";
 
 function HomePage() {
   return (

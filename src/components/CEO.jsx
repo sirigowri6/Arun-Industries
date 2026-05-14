@@ -1,4 +1,4 @@
-import ceo from "../assets/ceo.png";
+import CEO from "../assets/ceo.png";
 import { motion } from "framer-motion";
 
 function CEO() {
