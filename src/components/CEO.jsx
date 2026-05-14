@@ -1,5 +1,4 @@
 import ceo from "../assets/ceo.png";
-import { motion } from "framer-motion";
 
 function CEO() {
   return (
@@ -7,7 +6,6 @@ function CEO() {
       style={{
         padding: "120px 60px",
         background: "white",
-        overflow: "hidden",
       }}
     >
       <div
@@ -20,11 +18,7 @@ function CEO() {
           gap: "80px",
         }}
       >
-        <motion.div
-          initial={{ opacity: 0, x: -120 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 1 }}
+        <div
           style={{
             display: "flex",
             justifyContent: "center",
@@ -37,18 +31,11 @@ function CEO() {
               width: "100%",
               maxWidth: "420px",
               borderRadius: "25px",
-              boxShadow:
-                "0 15px 40px rgba(0,0,0,0.15)",
             }}
           />
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, x: 120 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 1 }}
-        >
+        <div>
           <p
             style={{
               color: "#00bfff",
@@ -81,11 +68,10 @@ function CEO() {
           >
             Arun Industries is guided by strong
             leadership committed towards sustainable
-            industrial growth, environmentally
-            responsible refining processes, and advanced
-            recycling solutions.
+            industrial growth and environmentally
+            responsible refining solutions.
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
