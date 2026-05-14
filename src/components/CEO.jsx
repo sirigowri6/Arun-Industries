@@ -1,4 +1,4 @@
-import CEO from "../assets/ceo.png";
+import ceo from "../assets/ceo.png";
 import { motion } from "framer-motion";
 
 function CEO() {
@@ -87,11 +87,7 @@ function CEO() {
             leadership committed towards sustainable
             industrial growth, environmentally
             responsible refining processes, and advanced
-            recycling solutions. With a focus on quality,
-            innovation, and industrial excellence, the
-            company continues to maintain high standards
-            in eco-friendly operations and hazardous
-            waste management practices.
+            recycling solutions.
           </p>
         </motion.div>
       </div>
