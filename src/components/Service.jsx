@@ -5,9 +5,9 @@ function Service() {
 
   const services = [
     {
-      title: "Lubricating Oil Refining",
+      title: "Lubricating Oil Re-refining",
       description:
-        "Advanced lubricating oil refining solutions using eco-friendly and efficient industrial processes.",
+        "Lubricating oil refining solutions using eco-friendly and efficient industrial processes.",
     },
 
     {

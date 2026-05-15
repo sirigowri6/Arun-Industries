@@ -1,18 +1,18 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
-import factory1 from "../assets/factory1.jpeg";
+import refining from "../assets/refining.jpeg";
 import factory2 from "../assets/factory2.jpeg";
 import factory3 from "../assets/factory3.jpeg";
 
 function Explore() {
   const slides = [
     {
-      image: factory1,
-      title: "WHY REFINING USED OIL",
+      image: refining,
+      title: "WHY RE-REFINING USED OIL",
       points: [
         "Used oil is one of the largest recyclable hazardous materials.",
         "Improper disposal contaminates soil and water resources.",
-        "Oil refining reduces industrial pollution effectively.",
         "Recycling conserves valuable natural resources.",
         "Eco-friendly refining supports sustainable industries.",
       ],
@@ -22,7 +22,7 @@ function Explore() {
       image: factory2,
       title: "REFINING PROCESS",
       points: [
-        "Modern filtration and purification technologies.",
+        "Vaccuum distilation, filtration and purification process",
         "Safe industrial oil processing systems.",
         "Environmentally responsible recycling methods.",
         "High-quality lubricant recovery process.",
@@ -45,6 +45,40 @@ function Explore() {
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_17drusn",
+        "template_n2nvijk",
+        form.current,
+        "oiW2I9EsIeZrCyuOc"
+      )
+      .then(() => {
+        alert("Message Sent Successfully!");
+      });
+
+    e.target.reset();
+  };
+
+  const inputStyle = {
+    padding: "18px",
+    borderRadius: "12px",
+    border: "1px solid #d1d5db",
+    fontSize: "18px",
+  };
+
+  const textareaStyle = {
+    padding: "18px",
+    borderRadius: "12px",
+    border: "1px solid #d1d5db",
+    fontSize: "18px",
+    resize: "none",
+  };
+
   return (
     <div
       style={{
@@ -52,7 +86,7 @@ function Explore() {
         minHeight: "100vh",
       }}
     >
-      {/* TOP SLIDER SECTION */}
+      {/* SLIDER SECTION */}
 
       <section
         style={{
@@ -69,8 +103,6 @@ function Explore() {
             margin: "auto",
           }}
         >
-          {/* LEFT CONTENT */}
-
           <div>
             <h1
               style={{
@@ -91,15 +123,11 @@ function Explore() {
                 color: "#374151",
               }}
             >
-              {slides[currentSlide].points.map(
-                (point, index) => (
-                  <li key={index}>{point}</li>
-                )
-              )}
+              {slides[currentSlide].points.map((point, index) => (
+                <li key={index}>{point}</li>
+              ))}
             </ul>
           </div>
-
-          {/* RIGHT IMAGE */}
 
           <div
             style={{
@@ -109,13 +137,11 @@ function Explore() {
           >
             <img
               src={slides[currentSlide].image}
-              alt="factory"
+              alt=""
               style={{
                 width: "100%",
                 maxWidth: "500px",
-                borderRadius: "15px",
-                boxShadow:
-                  "0 10px 40px rgba(0,0,0,0.15)",
+                borderRadius: "20px",
               }}
             />
           </div>
@@ -136,31 +162,24 @@ function Explore() {
               key={index}
               onClick={() => setCurrentSlide(index)}
               style={{
-                width:
-                  currentSlide === index
-                    ? "35px"
-                    : "12px",
-
+                width: currentSlide === index ? "35px" : "12px",
                 height: "12px",
                 borderRadius: "20px",
-
                 background:
-                  currentSlide === index
-                    ? "#111827"
-                    : "#9ca3af",
-
-                transition: "0.4s",
+                  currentSlide === index ? "#111827" : "#9ca3af",
                 cursor: "pointer",
               }}
             />
           ))}
         </div>
       </section>
+
+      {/* INFRASTRUCTURE & SAFETY */}
+
 <section
   style={{
     padding: "120px 60px",
     background: "#f5f7fa",
-    overflow: "hidden",
   }}
 >
   {/* INFRASTRUCTURE */}
@@ -177,17 +196,12 @@ function Explore() {
       marginRight: "auto",
     }}
   >
-    <div
-      style={{
-        transform: "translateX(-20px)",
-      }}
-    >
+    <div>
       <h1
         style={{
           fontSize: "60px",
           marginBottom: "30px",
           color: "#111827",
-          lineHeight: "1.2",
         }}
       >
         Modern Infrastructure
@@ -200,9 +214,10 @@ function Explore() {
           fontSize: "20px",
         }}
       >
-      We have facility to process 720 KL of Used Oil per annum. Arun Industries exclusively deals with Re-refining of Used Oils. This activity is also extended customers who wanted to recycle their oils as the re-refined oil meets the BSI standards.
-      We procure Used Oil generated from Power generating plants, Service Centers, Industries, IT Sector, Mall Etc.
-
+        We have facility to process 720 KL of Used Oil per annum and 360 KL of used coolent processing per annum.
+        Arun Industries exclusively deals with Re-refining of Used Oils.
+        This activity is also extended customers who wanted to recycle
+        their oils as the re-refined oil meets the BSI standards.
       </p>
     </div>
 
@@ -213,20 +228,19 @@ function Explore() {
       }}
     >
       <img
-        src={factory1}
+        src={factory2}
         alt=""
         style={{
           width: "100%",
           maxWidth: "520px",
           borderRadius: "20px",
-          boxShadow:
-            "0 10px 35px rgba(0,0,0,0.12)",
+          boxShadow: "0 10px 35px rgba(0,0,0,0.12)",
         }}
       />
     </div>
   </div>
 
-  {/* ENVIRONMENTAL SAFETY */}
+  {/* SAFETY */}
 
   <div
     style={{
@@ -245,29 +259,23 @@ function Explore() {
       }}
     >
       <img
-        src={factory2}
+        src={factory3}
         alt=""
         style={{
           width: "100%",
           maxWidth: "520px",
           borderRadius: "20px",
-          boxShadow:
-            "0 10px 35px rgba(0,0,0,0.12)",
+          boxShadow: "0 10px 35px rgba(0,0,0,0.12)",
         }}
       />
     </div>
 
-    <div
-      style={{
-        transform: "translateX(20px)",
-      }}
-    >
+    <div>
       <h1
         style={{
           fontSize: "60px",
           marginBottom: "30px",
           color: "#111827",
-          lineHeight: "1.2",
         }}
       >
         Environmental Safety
@@ -280,98 +288,201 @@ function Explore() {
           fontSize: "20px",
         }}
       >
-        Our fundamental approach is to ensure that the entire process of transporting, filtering, separating pollutants, distillation during recycling activity (with 100% free pollutant release to the environment) that ensure maximum safety to the environment. The yield of refined oil from this process is 100% pollutant free and can be blended safety with virgin oil or individually.
+        Our fundamental approach is to ensure that the entire process
+        of transportion, segregation, pre-filtrion, separating pollutants, distillation
+        during recycling activity ensures maximum safety to the environment.
       </p>
     </div>
   </div>
 </section>
 
-      {/* BROCHURE SECTION */}
+{/* BROCHURE SECTION */}
+
+<section
+  style={{
+    padding: "80px 40px",
+    background: "white",
+    textAlign: "center",
+  }}
+>
+  <h1
+    style={{
+      fontSize: "55px",
+      marginBottom: "50px",
+      color: "#111827",
+    }}
+  >
+    Explore Arun Industries
+  </h1>
+
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      flexWrap: "wrap",
+      gap: "30px",
+    }}
+  >
+    <a
+      href="/company-brochure.pdf"
+      target="_blank"
+      style={{
+        background: "#f5f7fa",
+        padding: "35px",
+        width: "320px",
+        borderRadius: "20px",
+        textDecoration: "none",
+        color: "#111827",
+        boxShadow: "0 5px 20px rgba(0,0,0,0.08)",
+      }}
+    >
+      <h2 style={{ marginBottom: "15px" }}>
+        Company Brochure
+      </h2>
+
+      <p>
+        View complete company profile and refinery operations.
+      </p>
+    </a>
+
+    <a
+      href="/ISO-Certificate.jpeg"
+      target="_blank"
+      style={{
+        background: "#f5f7fa",
+        padding: "35px",
+        width: "320px",
+        borderRadius: "20px",
+        textDecoration: "none",
+        color: "#111827",
+        boxShadow: "0 5px 20px rgba(0,0,0,0.08)",
+      }}
+    >
+      <h2 style={{ marginBottom: "15px" }}>
+        ISO Certificate
+      </h2>
+
+      <p>
+         Industrial certifications.
+      </p>
+    </a>
+
+   <a
+  href="/EPR-Certificate.pdf"
+  target="_blank"
+  style={{
+    background: "#f5f7fa",
+    padding: "35px",
+    width: "320px",
+    borderRadius: "20px",
+    textDecoration: "none",
+    color: "#111827",
+    boxShadow: "0 5px 20px rgba(0,0,0,0.08)",
+  }}
+>
+  <h2 style={{ marginBottom: "15px" }}>
+    EPR Certificate
+  </h2>
+
+  <p>
+    Extended Producer Responsibility certification details.
+  </p>
+</a>
+  </div>
+</section>
+
+      {/* MESSAGE SECTION */}
 
       <section
         style={{
-          padding: "80px 40px",
-          background: "white",
-          textAlign: "center",
+          padding: "100px 40px",
+          background: "#f5f7fa",
         }}
       >
-        <h1
-          style={{
-            fontSize: "55px",
-            marginBottom: "50px",
-            color: "#111827",
-          }}
-        >
-          Explore Arun Industries
-        </h1>
-
         <div
           style={{
-            display: "flex",
-            justifyContent: "center",
-            flexWrap: "wrap",
-            gap: "30px",
+            maxWidth: "900px",
+            margin: "auto",
+            textAlign: "center",
           }}
         >
-          {/* BROCHURE */}
-
-          <a
-            href="/company-brochure.pdf"
-            target="_blank"
+          <h1
             style={{
-              background: "#f5f7fa",
-              padding: "35px",
-              width: "320px",
-              borderRadius: "20px",
-              textDecoration: "none",
+              fontSize: "55px",
+              marginBottom: "25px",
               color: "#111827",
-              boxShadow:
-                "0 5px 20px rgba(0,0,0,0.08)",
             }}
           >
-            <h2
-              style={{
-                marginBottom: "15px",
-              }}
-            >
-              Company Brochure
-            </h2>
+            For Any Queries, Send Us a Message
+          </h1>
 
-            <p>
-              View complete company profile and refinery
-              operations.
-            </p>
-          </a>
-
-          {/* CERTIFICATE */}
-
-          <a
-            href="/CPCB-Certificate.pdf"
-            target="_blank"
+          <p
             style={{
-              background: "#f5f7fa",
-              padding: "35px",
-              width: "320px",
-              borderRadius: "20px",
-              textDecoration: "none",
-              color: "#111827",
-              boxShadow:
-                "0 5px 20px rgba(0,0,0,0.08)",
+              fontSize: "20px",
+              color: "#4b5563",
+              marginBottom: "50px",
             }}
           >
-            <h2
+            Our team will get back to you shortly.
+          </p>
+
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "25px",
+            }}
+          >
+            <input
+              type="text"
+              name="from_name"
+              placeholder="Your Name"
+              required
+              style={inputStyle}
+            />
+
+            <input
+              type="email"
+              name="from_email"
+              placeholder="Your Email"
+              required
+              style={inputStyle}
+            />
+
+            <input
+              type="text"
+              name="phone"
+              placeholder="Phone Number"
+              required
+              style={inputStyle}
+            />
+
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="6"
+              required
+              style={textareaStyle}
+            />
+
+            <button
+              type="submit"
               style={{
-                marginBottom: "15px",
+                background: "#00bfff",
+                color: "white",
+                padding: "18px",
+                border: "none",
+                borderRadius: "12px",
+                fontSize: "18px",
+                cursor: "pointer",
+                fontWeight: "bold",
               }}
             >
-              CPCB Certificate
-            </h2>
-
-            <p>
-              Authorized environmental and industrial
-              certifications.
-            </p>
-          </a>
+              Send Message
+            </button>
+          </form>
         </div>
       </section>
     </div>

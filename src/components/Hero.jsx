@@ -54,8 +54,8 @@ function Hero() {
             lineHeight: "1.8",
           }}
         >
-          Leading Lubricating Oil Refinery &
-          Sustainable Industrial Solutions
+          Leading Lubricating Oil Re-refineries and Grease Oil
+          
         </p>
       </div>
     </section>
