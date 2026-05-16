@@ -6,6 +6,7 @@ import factory2 from "../assets/factory2.jpeg";
 import factory3 from "../assets/factory3.jpeg";
 
 function Explore() {
+  const isMobile = window.innerWidth <= 768;
   const slides = [
     {
       image: refining,
@@ -96,7 +97,7 @@ function Explore() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "1fr 1fr",
+            gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
             alignItems: "center",
             gap: "60px",
             maxWidth: "1300px",
@@ -106,7 +107,7 @@ function Explore() {
           <div>
             <h1
               style={{
-                fontSize: "65px",
+                fontSize: isMobile ? "38px" : "65px",
                 lineHeight: "1.1",
                 marginBottom: "30px",
                 color: "#111827",
@@ -140,7 +141,7 @@ function Explore() {
               alt=""
               style={{
                 width: "100%",
-                maxWidth: "500px",
+                maxWidth: isMobile ? "100%" : "500px",
                 borderRadius: "20px",
               }}
             />
@@ -187,7 +188,7 @@ function Explore() {
   <div
     style={{
       display: "grid",
-      gridTemplateColumns: "1fr 1fr",
+      gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
       alignItems: "center",
       gap: "60px",
       marginBottom: "120px",
@@ -245,7 +246,7 @@ function Explore() {
   <div
     style={{
       display: "grid",
-      gridTemplateColumns: "1fr 1fr",
+      gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
       alignItems: "center",
       gap: "60px",
       maxWidth: "1300px",

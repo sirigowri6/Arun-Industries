@@ -10,7 +10,7 @@ function About() {
     >
       <h1
         style={{
-          fontSize: "50px",
+          fontSize:"50px",
           marginBottom: "40px",
         }}
       >

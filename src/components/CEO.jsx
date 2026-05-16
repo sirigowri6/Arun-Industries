@@ -1,7 +1,8 @@
 import ceo from "../assets/ceo.png";
 import { motion } from "framer-motion";
 
-function CEO() {
+function CEO(){
+const isMobile = window.innerWidth <= 768; 
   return (
     <section
       style={{
@@ -15,7 +16,7 @@ function CEO() {
           maxWidth: "1300px",
           margin: "auto",
           display: "grid",
-          gridTemplateColumns: "1fr 1fr",
+          gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
           alignItems: "center",
           gap: "80px",
         }}
