@@ -4,6 +4,8 @@ import emailjs from "@emailjs/browser";
 import refining from "../assets/refining.jpeg";
 import factory2 from "../assets/factory2.jpeg";
 import factory3 from "../assets/factory3.jpeg";
+import barrels from "../assets/barrels.jpeg";
+import factory1 from "../assets/factory1.jpeg";
 
 function Explore() {
   const isMobile = window.innerWidth <= 768;
@@ -36,7 +38,6 @@ function Explore() {
       title: "SUSTAINABLE INDUSTRY",
       points: [
         "CPCB authorized recycling procedures.",
-        "Zero discharge environmental operations.",
         "Reduction of industrial waste pollution.",
         "Responsible hazardous waste handling systems.",
         "Commitment towards safety and sustainability.",
@@ -229,7 +230,7 @@ function Explore() {
       }}
     >
       <img
-        src={factory2}
+        src={factory1}
         alt=""
         style={{
           width: "100%",
@@ -260,7 +261,7 @@ function Explore() {
       }}
     >
       <img
-        src={factory3}
+        src={barrels}
         alt=""
         style={{
           width: "100%",
